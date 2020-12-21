@@ -1,5 +1,5 @@
 # Telegram plug-in for Vera
-This plug-in uses [Telegram API](https://core.telegram.org/bots/api) to send push notifications via a Telegram Bot.
+This plug-in uses [Matrix Synapse API](https://core.telegram.org/bots/api) to send push notifications via a Telegram Bot.
 
 It's compatible with both Vera and openLuup.
 
