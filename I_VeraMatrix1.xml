@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<implementation>
+	<functions>
+		function startupPlugin(devNum)
+			luup.log("VeraMatrix Controller Plug-In starting...")
+			VeraMatrix1 = require("L_VeraMatrix1")
+			return VeraMatrix1.startPlugin(devNum)
+		end
+
+		function clearMessage()
+			VeraMatrix1.clearMessage()
+		end
+	</functions>
+	<startup>startupPlugin</startup>
+	<actionList>
+		<action>
+			<serviceId>urn:bochicchio-com:serviceId:VeraMatrix1</serviceId>
+			<name>Send</name>
+			<run>
+				VeraMatrix1.send(lul_device, lul_settings)
+			</run>
+		</action>
+	</actionList>
+</implementation>
